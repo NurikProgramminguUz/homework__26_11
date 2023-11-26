@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Black+Ops+One&family=Kdam+Thmor+Pro&family=Nova+Square&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .source_up h1 {
+            font-size: 60px;
+            font-family: 'Press Start 2P', cursive;
+        }
+
+        .source_up p {
+            font-size: 30px;
+            font-family: 'Kdam Thmor Pro', sans-serif; /* Added a fallback font */
+        }
+        #timer {
+            width: 300px;
+            height: 70px;
+            color: red;
+            border: 1px solid #7ed321;
+            border-radius: 7px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 55px;
+            font-family: 'Bebas Neue';
+            margin-left: 40%;
+            margin-bottom: 50px;
+            margin-top: 30px;
+        }
+    </style>
+    
+</head>
+
+
+<body>
+    <!-- Your content goes here -->
+    <div class="mainofthem">
+        <div class="upper">
+            <div class="vid">
+                <video autoplay loop muted>
+                    <source src="datapack/matrix.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="source_up">
+                <h1>SYSTEM IS HACKED</h1>
+                <p>꧁───Pay 5$ to stop process───꧂</p>
+            </div>
+        </div>
+        <div class="middle">
+            <div class="sourceofmid">
+                <img src="datapack/trojan_icon.png" class="trojan" >
+                <h1>T r o j a n V i r u s</h1>
+                <p>Dear user,
+
+                    We regret to inform you that your personal computer has fallen victim to a Trojan Virus, resulting in the complete compromise of your PC's control. Consequently, we possess the capability to erase your entire system. To prevent the deletion of your personal information, a payment of $5 is required within the next 3 days. Please be mindful of this deadline.
+                    
+                    Furthermore, we intend to access all your emails and their associated passwords. If you wish to avoid the unauthorized acquisition of your email data, an additional payment of $10 is necessary. Failure to remit the initial $5 within the specified timeframe will result in the irreversible destruction of your PC. Additionally, we will exploit your online accounts, conducting activities under your identity, thereby implicating you in actions you did not commit.
+                    
+                    Take this matter seriously and act promptly to secure your data and avoid the severe consequences outlined above.</p>
+                <div id="timer"></div>
+
+                <!-- your other body content here -->
+            
+                <script>
+                        
+        var targetDate = new Date();
+        targetDate.setHours(targetDate.getHours() + 72);
+
+        var timerInterval = setInterval(function () {
+            var now = new Date();
+            var secondsRemaining = Math.floor((targetDate - now) / 1000);
+            var hours = Math.floor(secondsRemaining / 3600);
+            var minutes = Math.floor((secondsRemaining % 3600) / 60);
+            var seconds = secondsRemaining % 60;
+
+            document.getElementById('timer').innerHTML =
+                hours + 'h ' + minutes + 'm ' + seconds + 's';
+
+            if (secondsRemaining <= 0) {
+                clearInterval(timerInterval);
+                document.getElementById('timer').innerHTML = 'Timer expired!';
+            }
+        }, 1000);
+                </script>
+                <div class="visa">
+                    <h2>Payment Form:</h2> <tr></tr>
+                    <input type="number" placeholder="Card Number" class="cn" pattern="\d{16}" required> <br>
+                    <input type="text" placeholder="Name on Card" class="cn" pattern="\d(4)" required> <br>
+                    <input type="number" placeholder="Expire date" class=" ed" pattern="\d()" required>
+                    <input type="number" class="ed" placeholder="VCC Code" pattern="\d()" required> <br>
+                    <div class="radiolar" required>
+                        <label class="radiocha" for="five">Subscription for 5$</label>
+                        <input type="radio" id="five" name="payment">
+                        <label class="radiocha" for="fif">Subscription for 15$</label>
+                        <input type="radio" id="fif" name="payment">
+                    </div>
+                    <button>Complete Payment</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="imganonim">
+                <img src="datapack/Anonim.jpg"classanonim>
+            </div>
+            <div class="connect_with_us">
+                <h1>Do not look for contact:</h1>
+                <h2>We will reach you out here after 72 hours. We know everything about you:</h2>
+                <MENU>
+                    <LI type="disc">Your Name is: Umar Adkhamov
+                    <LI type="disc">You connected to the wifi: PDP Students
+                    <LI type="disc">Your ip is: 172.16.254.1
+                    <LI type="disc">Your DNS is: 1.1.1.1 and 1.0.0.1
+                    <LI type="disc">Your device supports Windows 11 X64
+                    <LI type="disc">Your phone number is: +998*********
+                    </MENU>
+                <br> <br> 
+                <a href="">ㅤClick here if you want to comunicate with creator of this webㅤ</a>
+                <br> <br>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
